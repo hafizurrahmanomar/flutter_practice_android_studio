@@ -22,152 +22,131 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Home_Row_clumn',
+          'Home_Row_clumn and Rich Text',
         ),
-        elevation: 5,
+        elevation: 10,
       ),
-      body: Column(),
-    );
-  }
-}
-
-/*
-
-class MyApp extends StatelessWidget {
-  @override
-
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Todo app',
-      home: HomeScreen(),
-    );
-  }
-}
-
-class HomeScreen extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Home',),
-        elevation: 5,
-      ),
-      // body: Column(
+      // body: Raw(
       //   children: [
-      //     // Vertically
-      //     Text('Hello'),
-      //     Text('World'),
+      //     Text('Cloumn Start'),
+      //     Text('Subahanallah'),
+      //     Text('সুবহানাল্লাহ'),
+      //     Text('Alhamdulillah'),
+      //     Text('আলহামদুলিল্লাহ'),
+      //     Text('Allahuakbar'),
+      //     Text('আল্লাহু আকবার'),
+      //     Text('La- Elaha Ellallah'),
+      //     Text('লা-ইলাহা ইল্লাল্লাহ'),
+      //     Text('Cloumn End'),
       //   ],
       // ),
+
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
+        //mainAxisSize: MainAxisSize.min,
         mainAxisSize: MainAxisSize.max,
+        mainAxisAlignment: MainAxisAlignment.center,
+        //mainAxisAlignment: MainAxisAlignment.end,
+        //mainAxisAlignment: MainAxisAlignment.start,
+        //mainAxisAlignment: MainAxisAlignment.spaceAround,
+        //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        //crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          // Horizontally arrange
-          Text('Hello'),
-          Text('World'),
-          Text('World'),
-          Image.asset(
-            'images/uncle-bob.jpg',
-            width: 30,
-          ),
+          Text('Cloumn Start'),
+          Text('Subahanallah'),
+          Text('সুবহানাল্লাহ'),
+          Text('Alhamdulillah'),
+          Text('আলহামদুলিল্লাহ'),
+          Text('Allahuakbar'),
+          Text('আল্লাহু আকবার'),
+          Text('La- Elaha Ellallah'),
+          Text('লা-ইলাহা ইল্লাল্লাহ'),
+          Text('Cloumn End'),
           Row(
-            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              Text('sdfd'),
-              Text('alsk fkfl skd'),
+              // Text('Cloumn in Row Start'),
+              // Text('Subahanallah'),
+              Text('সুবহানাল্লাহ'),
+              // Text('Alhamdulillah'),
+              // Text('আলহামদুলিল্লাহ'),
+              // Text('Allahuakbar'),
+              // Text('আল্লাহু আকবার'),
+              // Text('Cloumn in Cloumn End'),
+
+              Image.asset('images/logo.png'),
             ],
           ),
           Column(
-            mainAxisSize: MainAxisSize.min,
+            //mainAxisSize: MainAxisSize.min,
+            //mainAxisSize: MainAxisSize.max,
             children: [
-              Text('sdfsdf'),
-              Text('sdfsdf'),
-              Text('sdfsdf'),
-              Text('sdfsdf'),
-              Text('sdfsdf'),
+              Text('Cloumn in Cloumn Start'),
+              Text('Allahuakbar'),
+              Text('আল্লাহু আকবার'),
+              Text('La- Elaha Ellallah'),
+              Text('লা-ইলাহা ইল্লাল্লাহ'),
+              Text('Cloumn in Cloumn End'),
+              //This is Rich Text Part in cloumn
+              RichText(
+                text: TextSpan(
+                    text: 'Alhamdulillah=>',
+                    style: TextStyle(
+                      color: Colors.purple.shade400,
+                      fontSize: 35,
+                      //decoration: TextDecoration.underline,
+                    ),
+                    children: [
+                      TextSpan(
+                        text: 'Please Subscribe:',
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Colors.amber.shade700,
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'My Youtube Channel',
+                        style: TextStyle(
+                          fontSize: 25,
+                          color: Color(0xff5900ff),
+                        ),
+                      ),
+                      TextSpan(
+                        text: 'Web App Developer BD',
+                        style: TextStyle(
+                          fontSize: 35,
+                          color: Color(0xffff5d00),
+                          decoration: TextDecoration.underline,
+                          decorationStyle: TextDecorationStyle.double,
+                        ),
+                      ),
+                    ]),
+              ),
+
+              //This is Button Part in cloumn
+              ElevatedButton(
+                  onPressed: () {
+                    //showAboutDialog(context: context);
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Text('This is alert Dialog'),
+                            content: Text('This alert meassage'),
+                            actions: [
+                              ElevatedButton(
+                                onPressed: () {},
+                                child: Text('Are you back now!'),
+                              )
+                            ],
+                          );
+                        });
+                  },
+                  child: Text('Tap Here')),
             ],
           ),
-          // Text('Hello from ostad'),
-          RichText(text: TextSpan(
-            text: 'Hello ',
-            style: TextStyle(
-                color: Colors.pink,
-              fontSize: 24
-              ),
-            children: [
-              TextSpan(
-                text: 'from',
-                style: TextStyle(
-                  color: Colors.black54
-                )
-              ),
-              TextSpan(
-                text: ' Ostad',
-                style: TextStyle(
-                  fontSize: 12
-                )
-              ),
-            ]
-          ),
-          ),
-          RichText(text: TextSpan(
-            text: 'Please accept the ',
-            style: TextStyle(
-                color: Colors.pink,
-              fontSize: 24
-              ),
-            children: [
-              TextSpan(
-                text: 'term and condition',
-                style: TextStyle(
-                  color: Colors.black,
-                  fontWeight: FontWeight.bold,
-                  decoration: TextDecoration.underline,
-                )
-              ),
-              TextSpan(
-                text: ' for use the app.',
-              ),
-            ]
-          ),
-          ),
-          ElevatedButton(
-            onPressed: () {
-              // showAboutDialog(context: context,);
-              // showDialog(context: context, builder: (context) {
-              //   return AlertDialog(
-              //     title: Text('Message'),
-              //     content: Text('Hello, welcome to app'),
-              //     actions: [
-              //       ElevatedButton(onPressed: () {}, child: Text('cancel'),),
-              //     ],
-              //   );
-              // });
-
-              showModalBottomSheet(
-                  isDismissible: false,
-                  backgroundColor: Colors.yellow,
-                  barrierColor: Colors.pink.shade300,
-                  context: context,
-                  builder: (_) {
-                    return Column(
-                      children: [
-                        Text('Message'),
-                        Text('Hello world'),
-                      ],
-                    );
-              });
-            },
-            child: Text('Tap here'),
-          ),
         ],
-      ) ,
+      ),
     );
   }
 }
-
-
- */
