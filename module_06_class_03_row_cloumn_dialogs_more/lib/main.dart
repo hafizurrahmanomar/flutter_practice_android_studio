@@ -1,3 +1,5 @@
+
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -65,6 +67,7 @@ class HomeScreen extends StatelessWidget {
           Text('Cloumn End'),
           Row(
             children: [
+<<<<<<< HEAD
               // Text('Cloumn in Row Start'),
               // Text('Subahanallah'),
               Text('সুবহানাল্লাহ'),
@@ -75,6 +78,16 @@ class HomeScreen extends StatelessWidget {
               // Text('Cloumn in Cloumn End'),
 
               Image.asset('images/logo.png'),
+=======
+              //Text('Cloumn in Row Start'),
+              // Text('Subahanallah'),
+              // Text('সুবহানাল্লাহ'),
+              // Text('Alhamdulillah'),
+              // Text('আলহামদুলিল্লাহ'),
+              // Text('Allahuakbar'),
+              Text('আল্লাহু আকবার'),
+              //Text('Cloumn in Cloumn End'),
+>>>>>>> origin/main
             ],
           ),
           Column(
