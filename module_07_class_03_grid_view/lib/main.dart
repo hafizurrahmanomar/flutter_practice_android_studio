@@ -221,4 +221,3 @@ class Home extends StatelessWidget {
     );
   }
 }
-
