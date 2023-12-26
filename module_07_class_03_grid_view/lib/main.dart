@@ -170,44 +170,50 @@ class Home extends StatelessWidget {
           gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
 
               // Adjust the number of columns as needed
-              crossAxisCount: 3,
+              crossAxisCount: 2,
               crossAxisSpacing: 4,
               mainAxisSpacing: 8),
           itemCount: myProducts.length,
           itemBuilder: (context, index) {
-            return InkWell(
+            return GestureDetector(
               onTap: () {},
               child: Card(
+                color: Color(0xffe5e7de),
                 elevation: 5,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Image.network(
-                        myProducts[index]['image']!,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Text(
-                        myProducts[index]['title']!,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14.0,
+                child: Container(
+                  width: double.infinity,
+                  height: 150,
+                  padding: EdgeInsets.all(15),
+                  child: Column(
+                    children: [
+                      Expanded(
+                        child: Image.network(
+                          myProducts[index]['image']!,
+                          fit: BoxFit.fill,
                         ),
                       ),
-                    ),
-                    Padding(
-                      padding: EdgeInsets.all(10),
-                      child: Text(
-                        '\$${myProducts[index]['price']}',
-                        style: TextStyle(
-                          color: Colors.green,
-                          fontSize: 10.0,
+                      Padding(
+                        padding: EdgeInsets.all(20),
+                        child: Text(
+                          myProducts[index]['title']!,
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 14.0,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                      Padding(
+                        padding: EdgeInsets.all(10),
+                        child: Text(
+                          '\$${myProducts[index]['price']!}',
+                          style: TextStyle(
+                            color: Color(0xfff40303),
+                            fontSize: 10.0,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             );
@@ -215,80 +221,4 @@ class Home extends StatelessWidget {
     );
   }
 }
-/*
 
-import 'package:flutter/material.dart';
-
-void main() {
-  runApp(MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('GridView Builder Example'),
-        ),
-        body: GridView.builder(
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, // Adjust the number of columns as needed
-            crossAxisSpacing: 8.0,
-            mainAxisSpacing: 8.0,
-          ),
-          itemCount: myProducts.length,
-          itemBuilder: (context, index) {
-            return InkWell(
-              onTap: () {
-                // Add your onTap logic here
-              },
-              child: Card(
-                color: Colors.purpleAccent,
-                elevation: 2.0,
-                child: Column(
-                  children: [
-                    Expanded(
-                      child: Image.network(
-                        myProducts[index]['image']!,
-                        fit: BoxFit.cover,
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        myProducts[index]['title']!,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16.0,
-                        ),
-                      ),
-                    ),
-                    Text(
-                      '\$${myProducts[index]['price']}',
-                      style: TextStyle(
-                        color: Colors.green,
-                        fontSize: 14.0,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
-
-// Sample data
-List<Map<String, dynamic>> myProducts = [
-  {'image': 'https://cdn.example.com/product1.jpg', 'title': 'Product 1', 'price': 19.99},
-  {'image': 'https://cdn.example.com/product2.jpg', 'title': 'Product 2', 'price': 29.99},
-  // Add more product data as needed
-];
-
-
-
-*/
