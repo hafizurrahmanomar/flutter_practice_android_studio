@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+// import HomeActivity
+import 'package:module_8_class_01_navigation/HomeActivity.dart';
+import 'package:module_8_class_01_navigation/LoginActivity.dart';
+import 'package:module_8_class_01_navigation/ProfileActivity.dart';
 
 void main() {
   runApp(MyApp());
@@ -7,6 +12,14 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      initialRoute: '/',
+      routes:{
+        '/':(context)=>HomeActivity(),
+        '/profile':(context)=>ProfileActivity(),
+        '/login':(context)=>LoginActivity(),
+        } ,
+
+    );
   }
 }
