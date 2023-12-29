@@ -1,0 +1,11 @@
+{
+  "dart.flutterSdkPath": ".fvm/flutter/beta",
+ 
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  
+  "files.watcherExclude": {
+    "**/.fvm": true
+  }
+}
