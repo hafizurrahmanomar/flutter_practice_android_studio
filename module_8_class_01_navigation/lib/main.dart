@@ -14,12 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-      routes:{
-        '/':(context)=>HomeActivity(),
-        '/profile':(context)=>ProfileActivity(),
-        '/login':(context)=>LoginActivity(),
-        } ,
-
+      routes: {
+        '/': (context) => HomeActivity(),
+        '/profile': (context) => ProfileActivity(),
+        '/login': (context) => LoginActivity(),
+      },
     );
   }
 }
