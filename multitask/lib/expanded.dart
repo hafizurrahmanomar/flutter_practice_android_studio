@@ -12,12 +12,13 @@ class _ExpandedPracticeState extends State<ExpandedPractice> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Expanded Widget Practice'),
+        title: const Text('Expanded Widget Practice'),
       ),
       body: Column(children: [
         Expanded(
           flex: 1,
           child: Container(
+            color: Colors.blueGrey,
             child: Row(
               children: [
                 Expanded(
@@ -40,51 +41,50 @@ class _ExpandedPracticeState extends State<ExpandedPractice> {
                 ),
               ],
             ),
-            color: Colors.blueGrey,
           ),
         ),
         Expanded(
           flex: 2,
           child: Container(
+            color: Colors.lightGreen,
             child: Row(
               children: [
                 Expanded(
+                  flex: 1,
                   child: Container(
                     color: Colors.red,
                   ),
-                  flex: 1,
                 ),
                 Expanded(
+                  flex: 3,
                   child: Container(
+                    color: Colors.brown,
                     child: Column(
                       children: [
                         Expanded(
+                          flex: 1,
                           child: Container(
                             color: Colors.black,
                           ),
-                          flex: 1,
                         ),
                         Expanded(
+                          flex: 3,
                           child: Container(
                             color: Colors.amber,
                           ),
-                          flex: 3,
                         ),
                         Expanded(
+                          flex: 2,
                           child: Container(
                             color: Colors.white,
                           ),
-                          flex: 2,
                         ),
                       ],
                     ),
-                    color: Colors.brown,
                   ),
-                  flex: 3,
                 ),
               ],
             ),
-            color: Colors.lightGreen,
           ),
         ),
         Expanded(
@@ -96,6 +96,7 @@ class _ExpandedPracticeState extends State<ExpandedPractice> {
         Expanded(
           flex: 1,
           child: Container(
+            color: Colors.red,
             child: Row(
               children: [
                 Expanded(
@@ -104,10 +105,10 @@ class _ExpandedPracticeState extends State<ExpandedPractice> {
                   ),
                 ),
                 Expanded(
-                  child: Container(
-                    color: Color(0xfff1eae9),
-                  ),
                   flex: 3,
+                  child: Container(
+                    color: const Color(0xfff1eae9),
+                  ),
                 ),
                 Expanded(
                   child: Container(
@@ -116,7 +117,6 @@ class _ExpandedPracticeState extends State<ExpandedPractice> {
                 ),
               ],
             ),
-            color: Colors.red,
           ),
         ),
       ]),
