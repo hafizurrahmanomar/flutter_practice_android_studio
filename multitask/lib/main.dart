@@ -1,20 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:multitask/home_page.dart';
+//import 'package:multitask/HomePage.dart';
+import 'package:multitask/expanded.dart';
 
 void main() => runApp(MyApp());
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
+    return const MaterialApp(
+      //home: HomePage(),
+      home: ExpandedPractice(
+        title: 'Expanded Widget',
+      ),
     );
   }
 }
