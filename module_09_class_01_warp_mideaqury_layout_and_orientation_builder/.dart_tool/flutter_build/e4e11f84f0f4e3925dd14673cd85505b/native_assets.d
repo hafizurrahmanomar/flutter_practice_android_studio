@@ -1,0 +1,1 @@
+ E:\\flutter_practice_android_studio\\module_09_class_01_warp_mideaqury_layout_and_orientation_builder\\.dart_tool\\flutter_build\\e4e11f84f0f4e3925dd14673cd85505b\\native_assets.yaml: 
