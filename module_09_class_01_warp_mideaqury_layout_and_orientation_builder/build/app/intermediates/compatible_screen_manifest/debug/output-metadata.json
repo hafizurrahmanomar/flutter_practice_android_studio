@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "artifactType": {
+    "type": "COMPATIBLE_SCREEN_MANIFEST",
+    "kind": "Directory"
+  },
+  "applicationId": "com.example.module_09_class_01_warp_mideaqury_layout_and_orientation_builder",
+  "variantName": "debug",
+  "elements": []
+}
